@@ -130,3 +130,48 @@ a {
   padding: 1.5rem;
   margin-top: 1rem;
 }
+
+.form-section {
+  justify-content: center;
+  margin-top: 2 rem;
+  padding: 3rem;
+  /* margin-left: 25%;
+  margin-right: 25%; */
+}
+
+.form {
+  padding: 3rem;
+  align-content: right;
+}
+
+.inside-form {
+  outline: 1px solid gray;
+  font-size: 2rem;
+  font-weight: lighter;
+  padding: 1rem;
+}
+
+.input-form {
+  outline: 1px solid gray;
+  font-size: 2rem;
+  font-weight: lighter;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: left;
+  width: 97%;
+}
+
+.button {
+  padding: 2rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.submit-emp {
+  padding: 1rem;
+  border-radius: 20%;
+  background-color: red;
+  color: white;
+  font-weight: 800;
+  font-size: 1rem;
+}
