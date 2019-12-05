@@ -15,9 +15,9 @@ const App = () => {
               <li>
                 <Link to="/">Home</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/1">All Employees</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/2">Add Employee</Link>
               </li>

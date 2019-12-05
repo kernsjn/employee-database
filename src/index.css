@@ -124,3 +124,9 @@ a {
   font-weight: 800;
   font-size: 1.5rem;
 }
+
+.employee-footer {
+  background-color: black;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}

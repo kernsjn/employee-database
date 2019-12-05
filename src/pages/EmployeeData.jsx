@@ -81,6 +81,7 @@ const EmployeeData = props => {
             </div>
           </div>
         </div>
+        <footer className="employee-footer"></footer>
       </main>
     </>
   )
