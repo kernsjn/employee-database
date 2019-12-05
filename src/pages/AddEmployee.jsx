@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 
 const AddEmployee = () => {
+  const [resetForm, setResetForm] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [birthday, setBirthday] = useState('')
@@ -31,7 +33,7 @@ const AddEmployee = () => {
         lastName: lastName,
         birthday: birthday,
         hiredDate: hireDate,
-        isFullTime: true,
+        isFullTime: isFullTime,
         profileImage: profileImage,
         jobTitle: jobTitle,
         jobDescription: jobDescription,
@@ -48,7 +50,12 @@ const AddEmployee = () => {
       }
     )
     console.log(resp.data)
+
+    window.location.reload(false)
+
+    // Redirect
   }
+
   return (
     <>
       <h1 className="directory-title">Add an Employee</h1>
@@ -102,14 +109,17 @@ const AddEmployee = () => {
             <div className="inside-form">
               <label htmlFor="full-time">Full Time:</label>
 
-              <input
+              <select
                 className="input-form"
                 onChange={e => {
                   setIsFullTime(e.target.value)
                 }}
                 type="text"
                 value={isFullTime}
-              />
+              >
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
             </div>
             <div className="inside-form">
               <label htmlFor="profile-image">Profile Image:</label>
