@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 
 const AddEmployee = () => {
-  const [resetForm, setResetForm] = useState('')
+  const [resetForm, setResetForm] = useState(false)
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [birthday, setBirthday] = useState('')
@@ -50,16 +50,16 @@ const AddEmployee = () => {
       }
     )
     console.log(resp.data)
+    setResetForm(true)
 
-    window.location.reload(false)
-
-    // Redirect
+    // window.location.reload(false)
   }
 
   return (
     <>
       <h1 className="directory-title">Add an Employee</h1>
       <main className="form-section">
+        {resetForm && <Redirect to="/" />}
         <form onSubmit={submitData} className="add-employee-form">
           <div className="form">
             <div className="inside-form">
